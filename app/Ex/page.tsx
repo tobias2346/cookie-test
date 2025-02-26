@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import { setCookieE } from '../components/actions'
 
-const page = () => {
+const Page = () => {
 
   const fetchData = async () => await setCookieE('Cookie2', 'cookieCreadaEnComponenteClienteConExpiracion')
   
@@ -15,4 +15,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

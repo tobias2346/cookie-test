@@ -8,6 +8,7 @@ export const getCookie = async (cookieName: string) => {
     const cookie = await cookieStore.get(cookieName)
     return cookie?.value;
   } catch (error) {
+    console.log(error)
     return 'error'
   }
 
@@ -19,6 +20,7 @@ export const setCookie = async (name: string, value: string) => {
     const cookieStore = await cookies();
     await cookieStore.set(name, value)
   } catch (error) {
+    console.log(error)
     return null
   }
 
@@ -35,6 +37,8 @@ export const setCookieE = async (name: string, value: string) => {
     }
     )
   } catch (error) {
+    console.log(error)
+
     return null
   }
 
@@ -47,6 +51,8 @@ export const deleteCookie = async (cookieName: string) => {
     await cookieStore.delete(cookieName);
     return 'eliminada'
   } catch (error) {
+    console.log(error)
+
     return 'error'
   }
 
